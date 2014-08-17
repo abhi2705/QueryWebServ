@@ -8,6 +8,7 @@ import java.io.IOException;
  
 
 import java.io.PrintWriter;
+import java.net.URL;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -36,10 +37,10 @@ public class Query extends HttpServlet {
     	 
     	response.setContentType("text/html");
 		
-        
-        
-        String csvFile = "C:/Users/Abhinav/Documents/Eclipse/QueryTool/src/datafile.csv";
-    	BufferedReader br = null;
+    	URL url = getClass().getResource("datafile.csv");
+    	
+        String csvFile = url.getPath();
+        BufferedReader br = null;
     	String line = "";
     	String cvsSplitBy = "\\|";
      
@@ -91,10 +92,10 @@ public class Query extends HttpServlet {
     public void search(HttpServletResponse response,String name) {
    	 
     	response.setContentType("text/html");
-		
-        
-        
-        String csvFile = "C:/Users/Abhinav/Documents/Eclipse/QueryWebServ/datafile.csv";
+    	
+    	URL url = getClass().getResource("datafile.csv");
+    	
+        String csvFile = url.getPath();
     	BufferedReader br = null;
     	String line = "";
     	String cvsSplitBy = "\\|";
@@ -188,6 +189,7 @@ public class Query extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
+		PrintWriter out = response.getWriter();
 		Query obj = new Query();
 		//obj.run(response);
 		String name = request.getParameter("firstName");
