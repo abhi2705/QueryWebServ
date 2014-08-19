@@ -125,7 +125,7 @@ public class Query extends HttpServlet {
    			line = line.replace("\"","");
     			data = line.split(cvsSplitBy);
     			
-    			if(data[1].equals(name))
+    			if(data[1].equals(name)||data[2].equals(name)||data[3].equals(name)||data[4].equals(name))
     			{
     				out.println("<tr>");
         			for(int i=0;i<data.length;i++)
