@@ -19,4 +19,14 @@
     <servlet-name>Query</servlet-name>
     <url-pattern>/Query</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SpecQuery</display-name>
+    <servlet-name>SpecQuery</servlet-name>
+    <servlet-class>com.web.csi.SpecQuery</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SpecQuery</servlet-name>
+    <url-pattern>/SpecQuery</url-pattern>
+  </servlet-mapping>
 </web-app>

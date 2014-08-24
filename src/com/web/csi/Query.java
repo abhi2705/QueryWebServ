@@ -33,11 +33,11 @@ public class Query extends HttpServlet {
     
     
     
-    public void run(HttpServletResponse response) {
+/*    public void run(HttpServletResponse response) {
     	 
     	response.setContentType("text/html");
 		
-    	URL url = getClass().getResource("datafile.csv");
+    	URL url = getClass().getResource("hello.csv");
     	
         String csvFile = url.getPath();
         BufferedReader br = null;
@@ -61,11 +61,11 @@ public class Query extends HttpServlet {
     				out.println("<td>"+"</td>");
     				continue;
     				}
-    				System.out.println(data[i]);
+   // 				System.out.println(data[i]);
     				out.println("<td>"+data[i]+"</td>");
     			}
     			
-    			System.out.println();
+    //			System.out.println();
     			
     		}
     		out.println("</tr>");
@@ -88,26 +88,32 @@ public class Query extends HttpServlet {
     	System.out.println("Done");
       }
     
-    
+    */
     public void search(HttpServletResponse response,String name) {
    	 
     	response.setContentType("text/html");
     	
-    	URL url = getClass().getResource("datafile.csv");
+    	URL url = getClass().getResource("hello.csv");
     	
         String csvFile = url.getPath();
+        //System.out.println(csvFile);
     	BufferedReader br = null;
     	String line = "";
     	String cvsSplitBy = "\\|";
      
     	try {
+    		
     		PrintWriter out = response.getWriter();
     		br = new BufferedReader(new FileReader(csvFile));
+    		/*
     		out.println("<table border=\"2\">");
 			
     		line = br.readLine();
+    		System.out.println(line);
     		line = line.replace("\"","");
 			String[] data = line.split(cvsSplitBy);
+			System.out.println("Data[2]");
+			System.out.println(data[2]);
 			out.println("<tr>");
 			for(int i=0;i<data.length;i++)
 			{
@@ -119,14 +125,19 @@ public class Query extends HttpServlet {
 				System.out.println(data[i]);
 				out.println("<td><b>"+data[i]+"</b></td>");
 			}
-    		
+    		*/
     		while ((line = br.readLine()) != null) {
-     
-   			line = line.replace("\"","");
-    			data = line.split(cvsSplitBy);
     			
-    			if(data[1].equals(name)||data[2].equals(name)||data[3].equals(name)||data[4].equals(name))
+   			line = line.replace("\"","");
+   			System.out.println(line);
+   			System.out.println("Another While");
+   			 String[]  data = line.split(cvsSplitBy);
+    			System.out.println(data[1]);
+    			System.out.println("Name which you have passed");
+    			System.out.println(name);
+    			if(data[1].equals(name))
     			{
+    				System.out.println("In If");
     				out.println("<tr>");
         			for(int i=0;i<data.length;i++)
         			{
@@ -163,7 +174,7 @@ public class Query extends HttpServlet {
     
     
     
-    
+
     
     
     

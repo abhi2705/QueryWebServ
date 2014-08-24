@@ -7,29 +7,72 @@
 <body BGCOLOR="silver">
 <H1 ALIGN="CENTER">Recruitment Query Tool</H1>
 
-<FORM ACTION="/Query"  METHOD="POST">
-  <h2>
-  Enter <b>Name/Roll No./Phone No./E-mail Id </b>to search:<br>
-  
-   
-  </h2>
-  <br><br>
+  <FORM ACTION="/Query"  METHOD="POST">
+  <h2 ALIGN="center">Enter Primary Keys</h2>
+  <h2 ALIGN="center">Name/RollNo/EmailID/PhoneNo</h2>
   <INPUT TYPE="TEXT" NAME="firstName"><BR>
-    <br><br>
+    
     <INPUT TYPE="SUBMIT" VALUE="Submit">
-  
 </FORM>
 
+
+<FORM ACTION="/SpecQuery" METHOD="POST">
+<h2>
+Or
+</h2>
+<h2>
+Search Comprehensive
+</h2>
+<select name="gender">
+  <option value="Select">Select</option>
+  <option value="M">M</option>
+  <option value="F">F</option>
+</select>
+
+<br>
+
+<br/>
+
+<select name="Yantras">
+	<option value="All">All</option>
+	<option value="Aptitude">Aptitude</option>
+	<option value="Sanganitra">Sanganitra</option>
+	<option value="Vidyut">Vidyut</option>
+	<option value="Yantrika">Yantrika</option>
+	<option value="NonTech">NonTech</option>
+</select>
+
+enter test scores:
+<input type="text" name="test"/>
+<br>
+
+<br/>
+<br/>
+<br/>
+<br>
+enter GD scores:
+<input type="text" name="gd"/>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+enter PI scores:
+<input type="text" name="pi"/>
+<br>
+
+
+<INPUT TYPE="SUBMIT" VALUE="submit">
+
+
+</FORM>
+
+
+
+
+
 <br><br><BR>
-Sample Names on which you can run the search (for now).
-<br>Name1
-<br>Name2
-<br>Name3
-<br>.
-<br>.
-<br>.
-<br>.
-<br>Name130
 </body>
 </html>
 
