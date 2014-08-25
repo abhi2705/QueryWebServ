@@ -14,5 +14,6 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER"/>
-	<classpathentry kind="output" path="build/classes"/>
+	<classpathentry kind="lib" path="F:/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.9.9"/>
+	<classpathentry kind="output" path="WebContent/WEB-INF/classes"/>
 </classpath>

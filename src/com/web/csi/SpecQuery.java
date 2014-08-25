@@ -240,7 +240,7 @@ public class SpecQuery extends HttpServlet {
     			*/
     			
     		}
-    		System.out.println(count);
+    		//out.println(count);
     		out.println("</tr>");
     		out.println("</table>");
     	} catch (FileNotFoundException e) {

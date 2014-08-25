@@ -94,9 +94,10 @@ public class Query extends HttpServlet {
     	response.setContentType("text/html");
     	
     	URL url = getClass().getResource("hello.csv");
-    	
+//    	
         String csvFile = url.getPath();
-        //System.out.println(csvFile);
+ //   	String csvFile = "";
+    	//System.out.println(csvFile);
     	BufferedReader br = null;
     	String line = "";
     	String cvsSplitBy = "\\|";
@@ -206,6 +207,9 @@ public class Query extends HttpServlet {
 		String name = request.getParameter("firstName");
 		//String name = JOptionPane.showInputDialog("Enter Student Name");
 		obj.search(response, name);
+// 		
+//		out.println("Hello World");
+//		
 	}
 
 }
